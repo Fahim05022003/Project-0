@@ -1,3 +1,5 @@
+import Cylinder from "./Cylinder";
+
 const allCylinders = [
   { id: 1, name: "Laughs Gas", size: 12, avaiable: true },
   { id: 2, name: "Bashundhara LP Gas", size: 12, avaiable: false },
@@ -11,7 +13,11 @@ const allCylinders = [
 export default function CylinderList() {
   return (
     <div>
-      <ul>{allCylinders.map((cylinder) => cylinder.name + " ")}</ul>
+      <ul>
+        {allCylinders.map((cylinder) => (
+          <Cylinder cylinder={cylinder} />
+        ))}
+      </ul>
     </div>
   );
 }
