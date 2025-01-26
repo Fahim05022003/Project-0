@@ -13,7 +13,7 @@ const allCylinders = [
     name: "Bashundhara LP Gas",
     size: 12,
     isAvaiable: false,
-    picture: `${publicUrl}/images/bashundhara.png`,
+    picture: `${publicUrl}/images/bashundhara.jpg`,
   },
   {
     id: 3,
@@ -27,14 +27,14 @@ const allCylinders = [
     name: "Omera LPG",
     size: 24,
     isAvaiable: false,
-    picture: `${publicUrl}/images/omera.png`,
+    picture: `${publicUrl}/images/omera.jpg`,
   },
   {
     id: 5,
     name: "Delta LPG",
     size: 12,
     isAvaiable: true,
-    picture: `${publicUrl}/images/delta.png`,
+    picture: `${publicUrl}/images/delta.jpg`,
   },
   {
     id: 6,
