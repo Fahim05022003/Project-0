@@ -42,8 +42,8 @@ body {
 /* Product List Styling */
 .product-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two-column grid */
-  gap: 15px; /* Space between items */
+  grid-template-columns: repeat(3, 1fr); /* Two-column grid */
+  gap: 25px; /* Space between items */
   list-style: none;
 }
 
@@ -68,9 +68,9 @@ body {
 /* Product Image Styling */
 .product-image {
   width: 100%; /* Full width of the product item */
-  height: 200px; /* Set a fixed height for consistency */
+  height: 350px; /* Set a fixed height for consistency */
   object-fit: cover; /* Ensure the image covers the area proportionally */
-  border-radius: 6px;
+  border-radius: 30px;
   margin-bottom: 10px; /* Space between image and text */
 }
 
