@@ -1,20 +1,25 @@
 import { useState } from "react";
 export default function Counterdemo() {
   const [count, setCount] = useState(0);
-  function handleCountMinus() {
-    setCount((count) => count - 1);
+
+  function handleCount(change) {
+    setCount((count) => count + change);
   }
 
-  function handleCountPlus() {
-    setCount((count) => count + 1);
-  }
   return (
-    <div className="counter">
-      <button onClick={handleCountMinus} disabled={count <= 0}>
+    <div
+      className="counter"
+      tabIndex="0"
+      onKeyDown={(e) => {
+        if (e.key === "ArrowDown" && count > 0) handleCount(-1);
+        if (e.key === "ArrowUp") handleCount(1);
+      }}
+    >
+      <button onClick={() => handleCount(-1)} disabled={count <= 0}>
         -
       </button>
       <span>{count}</span>
-      <button onClick={handleCountPlus}>+</button>
+      <button onClick={() => handleCount(1)}>+</button>
     </div>
   );
 }
