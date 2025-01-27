@@ -1,14 +1,20 @@
 import { useState } from "react";
 export default function Counterdemo() {
   const [count, setCount] = useState(0);
+  function handleCountMinus() {
+    setCount((count) => count - 1);
+  }
 
+  function handleCountPlus() {
+    setCount((count) => count + 1);
+  }
   return (
     <div className="counter">
-      <button onClick={() => setCount(count - 1)} disabled={count <= 0}>
+      <button onClick={handleCountMinus} disabled={count <= 0}>
         -
       </button>
       <span>{count}</span>
-      <button onClick={() => setCount(count + 1)}>+</button>
+      <button onClick={handleCountPlus}>+</button>
     </div>
   );
 }
