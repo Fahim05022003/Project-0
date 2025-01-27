@@ -7,6 +7,13 @@ export default function Count({ step }) {
     setCount((count) => Math.max(0, count + change));
   }
 
+  function handleDirectInput(e) {
+    const value = Number(e.target.value);
+    if (!isNaN(value) && value >= 0) {
+      setCount(value);
+    }
+  }
+
   return (
     <div
       className="counter"
@@ -23,7 +30,8 @@ export default function Count({ step }) {
       <button onClick={() => handleCount(-step)} disabled={count <= 0}>
         -
       </button>
-      <span>count: {count}</span>
+      <label>Count: </label>
+      <input type="text" value={count} onChange={handleDirectInput} />
       <button onClick={() => handleCount(step)}>+</button>
     </div>
   );
