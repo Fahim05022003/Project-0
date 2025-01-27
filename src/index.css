@@ -94,3 +94,39 @@ body {
     grid-template-columns: 1fr; /* Switch to single-column layout */
   }
 }
+
+/* For counters */
+.counter {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter button {
+  background: #e0d42a;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin: 0 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.counter button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.counter button:hover:not(:disabled) {
+  background: #a9ac18;
+}
+
+.counter span {
+  font-size: 1.2rem;
+  margin: 0 10px;
+  width: 30px;
+  text-align: center;
+  display: inline-block;
+}
